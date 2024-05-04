@@ -1,23 +1,28 @@
 const mongoose = require('mongoose')
 const  mongoosePaginate = require('mongoose-paginate-v2')
 
-const UserScheme = new mongoose.Schema(
+const ProducScheme = new mongoose.Schema(
     {
-        name: {
+        nombre: {
             type: String
         },
-        avatar: {
+        imagen: {
             type: String,
             default: 'http://image.com'
         },
-        email: {
+        descripcion: {
+            type: String
+        },
+        precio: {
             type: String,
-            unique: true,
             required: true
         },
-        password: {
+        stock: {
             type: String,
-            unique: true,
+            required: true
+        },
+        categoria: {
+            type: String ,
             required: true
         }
     },
@@ -27,5 +32,5 @@ const UserScheme = new mongoose.Schema(
     }
 )
 
-UserScheme.plugin(mongoosePaginate)
-module.exports = mongoose.model('user', UserScheme)
+ProducScheme.plugin(mongoosePaginate)
+module.exports = mongoose.model('producto', ProducScheme)

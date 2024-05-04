@@ -13,6 +13,11 @@ const port = 3001
 })*/
 
 const userRouter = require('./app/routes/user')
+const carritoRouter = require('./app/routes/carrito')
+const categoriaRouter = require('./app/routes/categoria')
+const metodoPagoRouter = require('./app/routes/metodoPago')
+const productoRouter = require('./app/routes/producto')
+const ordenRouter = require('./app/routes/orden')
 const itemsRouter = require('./app/routes/items')
 
 app.use(
@@ -27,6 +32,11 @@ app.use(
     })
 );
 app.use(userRouter)
+app.use(carritoRouter)
+app.use(categoriaRouter)
+app.use(metodoPagoRouter)
+app.use(productoRouter)
+app.use(ordenRouter)
 app.use(itemsRouter)
 
 app.listen(port, () =>{

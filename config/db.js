@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const DB_URI = `mongodb://localhost:27017/my_first_time`;
+const DB_URI = `mongodb://localhost:27017/new_try`;
 
 const connect = async () => {
   try {
